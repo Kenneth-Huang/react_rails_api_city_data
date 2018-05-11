@@ -57,14 +57,14 @@ class App extends Component {
   }
 
   render() {
-    const {isFetching, loading, reportData} = this.state
+    const {isFetching, loading, reportData, city, state} = this.state
 
     return (
       <div className="container">
         <h1>City Information Report</h1>
         <ReportForm setReportLocation={this.setReportLocation} />
         {isFetching ? <img className='loading-spinner' src={loading} alt='Loading...' /> : ""}
-        {reportData ? <Report data={reportData} /> : ""}
+        {reportData ? <Report data={reportData} city={city} state={state}/> : ""}
 
       </div>
     );
