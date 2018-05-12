@@ -33,7 +33,7 @@ class LocationSearchInput extends React.Component {
         <input className="form-control" {...getInputProps()} />
         <div className="autocomplete-dropdown-container">
           {suggestions.map(suggestion => (
-            <div {...getSuggestionItemProps(suggestion)}>
+            <div {...getSuggestionItemProps(suggestion)} className="suggestion">
               <span>{suggestion.description}</span>
             </div>
           ))}
