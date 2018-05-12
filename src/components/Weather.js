@@ -8,7 +8,7 @@ class Weather extends React.Component {
       <React.Fragment>
         <LocationWeather geoLocation={current_city}/>
 
-        {nearby_cities.map((city) => { return <LocationWeather geoLocation={city}/> })}
+        {nearby_cities.map((loc) => { return <LocationWeather geoLocation={loc}/> })}
 
       </React.Fragment>
     )

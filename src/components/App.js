@@ -7,8 +7,8 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      city: '',
-      state: '',
+      cityLoc: '',
+      stateLoc: '',
       loading: '/images/loading1.gif',
       isFetching: false,
       baseUrl: 'http://localhost:3001/reports',
@@ -18,20 +18,20 @@ class App extends Component {
 
   setReportLocation = (location) => {
     this.setState({
-      city: location.city,
-      state: location.state
+      cityLoc: location.cityLoc,
+      stateLoc: location.stateLoc
     })
     this.getReportData(location)
   }
 
   getReportData = (inputLocation) => {
-    const {state, city} = inputLocation
+    const {stateLoc, cityLoc} = inputLocation
     // Before performing the fetch, set isFetching to true
     this.setState({isFetching: true})
     // After component mounts, call the API to get the
     // users, then update state which triggers re-render
     // fetch('http://localhost:3001/reports/tx/austin', {
-    fetch(`${this.state.baseUrl}/${state}/${city}`, {
+    fetch(`${this.state.baseUrl}/${stateLoc}/${cityLoc}`, {
       headers:
         {
           'Accept': 'application/json',
@@ -57,14 +57,14 @@ class App extends Component {
   }
 
   render() {
-    const {isFetching, loading, reportData, city, state} = this.state
+    const {isFetching, loading, reportData, cityLoc, stateLoc} = this.state
 
     return (
       <div className="container">
         <h1>City Information Report</h1>
         <ReportForm setReportLocation={this.setReportLocation} />
         {isFetching ? <img className='loading-spinner' src={loading} alt='Loading...' /> : ""}
-        {reportData ? <Report data={reportData} city={city} state={state}/> : ""}
+        {reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
 
       </div>
     );

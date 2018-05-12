@@ -2,14 +2,16 @@ import React from "react"
 
 class ReportForm extends React.Component {
 
-  cityRef = React.createRef()
-  stateRef = React.createRef()
+  cityLocRef = React.createRef()
+  stateLocRef = React.createRef()
+
 
   createReportLocation = (e) => {
     e.preventDefault()
     const inputLocation = {
-      city: this.cityRef.current.value,
-      state: this.stateRef.current.value
+      cityLoc: this.cityLocRef.current.value,
+      stateLoc: this.stateLocRef.current.value
+
     }
     this.props.setReportLocation(inputLocation)
 
@@ -29,11 +31,11 @@ class ReportForm extends React.Component {
 
         <div className="row">
           <div className="col-sm-8">
-            <input ref={this.cityRef} type="text" name="city" placeholder="City" className="form-control"/>
+            <input ref={this.cityLocRef} type="text" name="city" placeholder="City" className="form-control"/>
           </div>
 
           <div className="col-sm-2">
-            <input ref={this.stateRef} type="text" name="state" placeholder="State" className="form-control"/>
+            <input ref={this.stateLocRef} type="text" name="state" placeholder="State" className="form-control"/>
           </div>
 
           <div className="col-sm-2">
