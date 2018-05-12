@@ -1,18 +1,34 @@
 import React from "react"
+import LocationSearchInput from './LocationSearchInput'
+
 
 class ReportForm extends React.Component {
 
-  cityLocRef = React.createRef()
-  stateLocRef = React.createRef()
+  constructor(){
+    super()
+    this.state = {
+      cityLoc: '',
+      stateLoc: ''
+    }
+  }
 
+  // Gets the info from LocationSearchInput and saves it to ReportForm state
+  setFormLocation = (googleLocation) => {
+    let parsedLoc = googleLocation.split(', ')
+    this.setState({
+      cityLoc: parsedLoc[0],
+      stateLoc: parsedLoc[1]
+    })
+  }
 
+  // Processes the form submission
   createReportLocation = (e) => {
     e.preventDefault()
     const inputLocation = {
-      cityLoc: this.cityLocRef.current.value,
-      stateLoc: this.stateLocRef.current.value
-
+      cityLoc: this.state.cityLoc,
+      stateLoc: this.state.stateLoc
     }
+    // Sets the location for the Report components
     this.props.setReportLocation(inputLocation)
 
     // Clear the form fields
@@ -25,23 +41,18 @@ class ReportForm extends React.Component {
       <form onSubmit={this.createReportLocation}  className="card card-body mb-3">
         <div className="row">
           <div className="col-sm-12">
-            <p>Enter a Location</p>
+            <p>Enter a US City</p>
           </div>
         </div>
 
         <div className="row">
-          <div className="col-sm-8">
-            <input ref={this.cityLocRef} type="text" name="city" placeholder="City" className="form-control"/>
-          </div>
-
-          <div className="col-sm-2">
-            <input ref={this.stateLocRef} type="text" name="state" placeholder="State" className="form-control"/>
+          <div className="col-sm-10">
+            <LocationSearchInput setFormLocation={this.setFormLocation}/>
           </div>
 
           <div className="col-sm-2">
             <button type="submit" className="btn btn-xs btn-primary">Submit</button>
           </div>
-
         </div>
       </form>
 

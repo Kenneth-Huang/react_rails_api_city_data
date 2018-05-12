@@ -16,6 +16,7 @@ class App extends Component {
     }
   }
 
+  // Sets the state of App.js
   setReportLocation = (location) => {
     this.setState({
       cityLoc: location.cityLoc,
@@ -24,6 +25,7 @@ class App extends Component {
     this.getReportData(location)
   }
 
+  // Hit the API to get data
   getReportData = (inputLocation) => {
     const {stateLoc, cityLoc} = inputLocation
     // Before performing the fetch, set isFetching to true
