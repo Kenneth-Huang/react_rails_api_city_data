@@ -10,7 +10,7 @@ class Events extends React.Component {
     return (
       <React.Fragment>
         <h2>Events</h2>
-        { events.map((event) => { return <Event key={event} data={event}/> }) }
+        { events.map((event) => { return <Event key={event.id} data={event}/> }) }
       </React.Fragment>
     )
   }
