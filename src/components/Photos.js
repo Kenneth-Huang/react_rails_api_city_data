@@ -8,9 +8,13 @@ class Photos extends React.Component {
     return (
       <React.Fragment>
         <h2>Photos</h2>
-        <div className="row">
-        { photos.map((photo) => { return <Photo key={photo} data={photo}/> }) }
+
+        <div className="card-columns">
+          <div className="row">
+            { photos.map((photo) => { return <Photo key={photo} data={photo}/> }) }
+          </div>
         </div>
+
       </React.Fragment>
     )
   }

@@ -25,16 +25,12 @@ class Report extends React.Component {
       <div className="row">
         <div className="col-sm-8">
           { events ? <Events data={events}/> : <p>There are no Events in {cityLoc}, {stateLoc} in the next 30 days.</p> }
+
+          { photos ? <Photos data={photos}/> : <p>Oh darn. There are no Photos tagged with {cityLoc}, {stateLoc}.</p> }
         </div>
 
         <div className="col-sm-3">
           { articles ? <Articles data={articles}/> : <p>There are no Articles on the topic of {cityLoc}, {stateLoc}.</p> }
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-sm-12">
-          { photos ? <Photos data={photos}/> : <p>Oh darn. There are no Photos tagged with {cityLoc}, {stateLoc}.</p> }
         </div>
       </div>
 

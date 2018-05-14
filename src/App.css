@@ -86,3 +86,11 @@ p { font-family: 'Roboto', sans-serif; }
   float: left;
   margin-right: 10px;
 }
+
+.card-columns {
+  column-break-inside: avoid;
+}
+.card-columns .card {
+  display: inline-block;
+  margin: 10px;
+}
