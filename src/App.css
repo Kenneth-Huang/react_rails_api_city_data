@@ -1,8 +1,58 @@
+h1, h2, h3, h4, h5 {
+  font-family: 'Gothic A1', sans-serif;
+}
+p { font-family: 'Roboto', sans-serif; }
+
+
 .loading-spinner {height: 50px;}
-.smaller {font-size: 80%;}
 .suggestion {
   background-color: #f1f1f1;
   color: gray;
   font-size: 80%;
   padding: 0.25em 0.7em;
+}
+
+.article {
+  border: 1px solid #f1f1f1;
+  padding: 5%;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.article h4 {
+  margin: 0px;
+  font-size: 0.9em;
+}
+
+.article p {
+  margin: 0px;
+  font-size: 0.7em;
+  color: gray;
+}
+
+.event {
+  border: 1px solid #f1f1f1;
+  padding: 2%;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.event-image-holder {
+  width: 80px;
+  float: left;
+  margin-right: 30px;
+}
+
+.event-image-holder img {
+  width: 80px;
+
+}
+
+.event-text-holder h3 {
+  font-size: 1.25em;
+  margin-bottom: 0px;
+}
+
+.event-text-holder p {
+  font-size: 0.9em;
 }

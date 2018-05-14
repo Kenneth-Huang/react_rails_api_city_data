@@ -12,20 +12,33 @@ class Report extends React.Component {
     const {area_weather, events, articles, photos} = data
 
     return (
+      <React.Fragment>
+
       <div className="row">
-        <div className="col-xs-12">
+        <div className="col-sm-12">
           <ReportHeader cityLoc={cityLoc} stateLoc={stateLoc}/>
 
           { area_weather ? <Weather data={area_weather}/> : <p>There is no Weather Information for the {cityLoc}, {stateLoc} area.</p> }
-
-          { events ? <Events data={events}/> : <p>There are no Events in {cityLoc}, {stateLoc} in the next 30 days.</p> }
-
-          { articles ? <Articles data={articles}/> : <p>There are no Articles on the topic of {cityLoc}, {stateLoc}.</p> }
-
-          { photos ? <Photos data={photos}/> : <p>Oh darn. There are no Photos tagged with {cityLoc}, {stateLoc}.</p> }
-
         </div>
       </div>
+
+      <div className="row">
+        <div className="col-sm-8">
+          { events ? <Events data={events}/> : <p>There are no Events in {cityLoc}, {stateLoc} in the next 30 days.</p> }
+        </div>
+
+        <div className="col-sm-3">
+          { articles ? <Articles data={articles}/> : <p>There are no Articles on the topic of {cityLoc}, {stateLoc}.</p> }
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-sm-12">
+          { photos ? <Photos data={photos}/> : <p>Oh darn. There are no Photos tagged with {cityLoc}, {stateLoc}.</p> }
+        </div>
+      </div>
+
+      </React.Fragment>
     )
   }
 }
