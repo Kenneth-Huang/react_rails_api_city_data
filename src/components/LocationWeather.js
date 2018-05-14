@@ -4,10 +4,11 @@ class LocationWeather extends React.Component {
   render(){
     const geoLocation = this.props.geoLocation
     return (
-      <React.Fragment>
-        <h4>Weather for {geoLocation.city}, {geoLocation.state} as of {geoLocation.local_time}</h4>
+      <div className="col-sm-4">
+        <img src={geoLocation.icon_url} alt={geoLocation.description}/>
+        <h4>{geoLocation.city}, {geoLocation.state}</h4>
         <p>{geoLocation.temperature} and {geoLocation.description}</p>
-      </React.Fragment>
+      </div>
     )
   }
 }
