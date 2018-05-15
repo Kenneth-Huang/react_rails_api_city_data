@@ -13,9 +13,10 @@ This is one of my first few React projects and does not use Redux
   * Related Articles via [New York Times](https://developer.nytimes.com/)
   * Photos via [flickr photo search](https://www.flickr.com/services/api/)
   * Upcoming Events via [Eventful](http://api.eventful.com/docs)
-- Uses [Google Places API](https://developers.google.com/places/web-service/intro) for location entry
+- Uses [Google Places API](https://developers.google.com/places/web-service/intro) for location autocomplete
 - Spinny wheel while you wait for API results
 - Uses vanilla React for rendering components
+- Bootstrap 4
 
 ## Getting Started
 
@@ -30,3 +31,82 @@ This is one of my first few React projects and does not use Redux
 
 ![Alt text](/public/images/readme_screenshot.jpg?raw=true "Home Page")
 
+
+### Architecture
+
+The architecture of the app components looks like this:
+
+```
+App.js
+ - ReportForm
+   - LocationSearchInput
+ - Report
+   - ReportHeader
+   - Weather
+     - LocationWeather
+   - Events
+     - Event
+   - Articles
+     - Article
+   - Photos
+     - Photo
+
+```
+
+The majority of the functions live in the `App.js` component. This is where the location setting and calls to the Rails API happen. The API calls use `fetch` and promises.
+
+```js
+// src/components/App.js
+
+getReportData = (inputLocation) => {
+  const {stateLoc, cityLoc} = inputLocation
+
+  this.setState({isFetching: true})
+  fetch(`${this.state.baseUrl}/${stateLoc}/${cityLoc}`, {
+    headers:
+      {
+        'Accept': 'application/json',
+        'Credentials': 'same-origin'
+      }
+  })
+    .then(function(response){
+      console.log({response})
+      if(!response.ok){
+        throw new Error(`Response Not OK: ${response.status} ${response.statusText}`)
+      }
+      return response.json()
+    })
+    .then((json) => {
+      this.setState({
+        reportData: json.data.attributes,
+        isFetching: false
+      })
+    })
+    .catch(function(err){
+      console.log(err)
+    })
+}
+```
+
+Report data is sent via the `Report` component...
+
+```
+// src/components/App.js
+
+{reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
+```
+
+... and trickles down to the other components via props from there.
+```html
+// src/components/Report.js
+
+<ReportHeader cityLoc={cityLoc} stateLoc={stateLoc}/>
+
+{ area_weather ? <Weather data={area_weather}/> : <p>There is no Weather Information for the {cityLoc}, {stateLoc} area.</p> }
+
+{ events ? <Events data={events}/> : <p>There are no Events in {cityLoc}, {stateLoc} in the next 30 days.</p> }
+
+{ photos ? <Photos data={photos}/> : <p>Oh darn. There are no Photos tagged with {cityLoc}, {stateLoc}.</p> }
+
+{ articles ? <Articles data={articles}/> : <p>There are no Articles on the topic of {cityLoc}, {stateLoc}.</p> }
+```
