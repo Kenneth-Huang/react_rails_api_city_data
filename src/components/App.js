@@ -32,7 +32,6 @@ class App extends Component {
     this.setState({isFetching: true})
     // After component mounts, call the API to get the
     // users, then update state which triggers re-render
-    // fetch('http://localhost:3001/reports/tx/austin', {
     fetch(`${this.state.baseUrl}/${stateLoc}/${cityLoc}`, {
       headers:
         {

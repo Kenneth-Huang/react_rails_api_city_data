@@ -29,7 +29,7 @@ class Report extends React.Component {
           { photos ? <Photos data={photos}/> : <p>Oh darn. There are no Photos tagged with {cityLoc}, {stateLoc}.</p> }
         </div>
 
-        <div className="col-sm-3">
+        <div className="col-sm-4">
           { articles ? <Articles data={articles}/> : <p>There are no Articles on the topic of {cityLoc}, {stateLoc}.</p> }
         </div>
       </div>
