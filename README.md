@@ -1,10 +1,9 @@
-# City Information Report
+# City Information Aggregator
 
 (a.k.a. react_rails_api_city_data)
 
-This is a practice React app built to consume the [Rails API Integrator API](https://github.com/lortza/rails_api_integrator)
+This is one of my first few React projects. It was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and it consumes a separate [Rails API Integrator API](https://github.com/lortza/rails_api_integrator) app that I built.
 
-This is one of my first few React projects and does not use Redux
 
 ## Features
 
