@@ -1,5 +1,6 @@
 import React from "react"
 import Article from './Article'
+var shortid = require('shortid');
 
 
 class Articles extends React.Component {
@@ -9,7 +10,7 @@ class Articles extends React.Component {
     return (
       <React.Fragment>
         <h2>Articles</h2>
-        { articles.map((article) => { return <Article key={article} data={article}/> }) }
+        { articles.map((article) => { return <Article key={shortid.generate()} data={article}/> }) }
       </React.Fragment>
     )
   }

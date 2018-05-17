@@ -1,5 +1,6 @@
 import React from "react"
 import Photo from './Photo'
+var shortid = require('shortid');
 
 class Photos extends React.Component {
   render(){
@@ -11,7 +12,7 @@ class Photos extends React.Component {
 
         <div className="card-columns">
           <div className="row">
-            { photos.map((photo) => { return <Photo key={photo} data={photo}/> }) }
+            { photos.map((photo) => { return <Photo key={shortid.generate()} data={photo}/> }) }
           </div>
         </div>
 

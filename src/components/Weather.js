@@ -1,5 +1,6 @@
 import React from "react"
 import LocationWeather from './LocationWeather'
+var shortid = require('shortid');
 
 class Weather extends React.Component {
   render(){
@@ -15,7 +16,7 @@ class Weather extends React.Component {
         </div>
 
         <div className="nearby-cities row">
-          {nearby_cities.map((loc) => { return <LocationWeather geoLocation={loc}/> })}
+          {nearby_cities.map((loc) => { return <LocationWeather geoLocation={loc} key={shortid.generate()}/> })}
         </div>
 
       </div>

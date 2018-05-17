@@ -40,7 +40,6 @@ class App extends Component {
         }
     })
       .then(function(response){
-        console.log({response})
         if(!response.ok){
           throw new Error(`Response Not OK: ${response.status} ${response.statusText}`)
         }
