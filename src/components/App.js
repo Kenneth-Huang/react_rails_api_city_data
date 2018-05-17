@@ -63,7 +63,7 @@ class App extends Component {
         <h1>City Information Report</h1>
         <ReportForm setReportLocation={this.setReportLocation} />
         {isFetching ? <LoadingIndicator /> : ""}
-        {reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
+        {!isFetching && reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
 
       </div>
     );
