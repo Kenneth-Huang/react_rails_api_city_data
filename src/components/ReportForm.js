@@ -17,7 +17,7 @@ class ReportForm extends React.Component {
     let parsedLoc = googleLocation.split(', ')
     this.setState({
       cityLoc: parsedLoc[0],
-      stateLoc: parsedLoc[1]
+      stateLoc: parsedLoc[1].substring(0,2)
     })
   }
 
