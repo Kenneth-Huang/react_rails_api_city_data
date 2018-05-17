@@ -66,8 +66,8 @@ p { font-family: 'Roboto', sans-serif; }
   border: 1px solid #f1f1f1;
   padding: 2%;
   border-radius: 5px;
-  overflow: auto;
   background-color: #f1f1f1;
+  margin: 10px 0px 50px 0px;
 }
 
 .weather .current-city {
@@ -83,11 +83,11 @@ p { font-family: 'Roboto', sans-serif; }
   padding-top: 25px;
 }
 
-.weather .nearby-cities h4 {
+.weather .weather-cities h4 {
   margin: 0px;
 }
 
-.weather .nearby-cities img {
+.weather .weather-cities img {
   float: left;
   margin-right: 10px;
 }

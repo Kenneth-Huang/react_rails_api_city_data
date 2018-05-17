@@ -4,7 +4,7 @@ var shortid = require('shortid');
 
 class Weather extends React.Component {
   render(){
-    const {current_city, nearby_cities} = this.props.data
+    const {current_city, nearby_cities, major_cities} = this.props.data
     return (
       <div className="weather">
 
@@ -15,8 +15,12 @@ class Weather extends React.Component {
           <h1>{current_city.temperature}<br/>{current_city.description}</h1>
         </div>
 
-        <div className="nearby-cities row">
+        <div className="weather-cities row">
           {nearby_cities.map((loc) => { return <LocationWeather geoLocation={loc} key={shortid.generate()}/> })}
+        </div>
+
+        <div className="weather-cities row">
+          {major_cities.map((loc) => { return <LocationWeather geoLocation={loc} key={shortid.generate()}/> })}
         </div>
 
       </div>
