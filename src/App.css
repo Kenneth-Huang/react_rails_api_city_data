@@ -4,7 +4,12 @@ h1, h2, h3, h4, h5 {
 p { font-family: 'Roboto', sans-serif; }
 
 
-.loading-spinner {height: 50px;}
+.loading-indicator {
+  margin-top: 50px;
+  text-align: center;
+}
+.loading-indicator img {height: 100px;}
+
 .suggestion {
   background-color: #f1f1f1;
   color: gray;

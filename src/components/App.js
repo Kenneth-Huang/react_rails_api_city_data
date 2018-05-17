@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Report from './Report'
 import ReportForm from './ReportForm'
+import LoadingIndicator from './LoadingIndicator'
 
 class App extends Component {
   constructor(){
@@ -9,10 +10,9 @@ class App extends Component {
     this.state = {
       cityLoc: '',
       stateLoc: '',
-      loading: '/images/loading1.gif',
       isFetching: false,
       baseUrl: 'http://localhost:3001/reports',
-      report: false
+      reportData: false
     }
   }
 
@@ -58,13 +58,12 @@ class App extends Component {
   }
 
   render() {
-    const {isFetching, loading, reportData, cityLoc, stateLoc} = this.state
-
+    const {isFetching, reportData, cityLoc, stateLoc} = this.state
     return (
       <div className="container">
         <h1>City Information Report</h1>
         <ReportForm setReportLocation={this.setReportLocation} />
-        {isFetching ? <img className='loading-spinner' src={loading} alt='Loading...' /> : ""}
+        {isFetching ? <LoadingIndicator /> : ""}
         {reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
 
       </div>
