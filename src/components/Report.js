@@ -17,8 +17,7 @@ class Report extends React.Component {
       <div className="row">
         <div className="col-sm-12">
           <ReportHeader cityLoc={cityLoc} stateLoc={stateLoc}/>
-
-          { area_weather ? <Weather data={area_weather}/> : <p>There is no Weather Information for the {cityLoc}, {stateLoc} area.</p> }
+          { area_weather ? <Weather data={area_weather} /> : <p>There is no Weather Information for the {cityLoc}, {stateLoc} area.</p> }
         </div>
       </div>
 

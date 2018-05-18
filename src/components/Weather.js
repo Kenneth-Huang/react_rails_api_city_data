@@ -1,10 +1,29 @@
 import React from "react"
-import LocationWeather from './LocationWeather'
-var shortid = require('shortid');
+import WeatherToggleButton from './WeatherToggleButton'
+import RelatedCities from './RelatedCities'
 
 class Weather extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      displayMajorCities: false
+    }
+  }
+
+  toggleWeather = (e) => {
+    e.preventDefault()
+    if(this.state.displayMajorCities === true){
+      this.setState({displayMajorCities: false})
+    } else {
+      this.setState({displayMajorCities: true})
+    }
+  }
+
   render(){
     const {current_city, nearby_cities, major_cities} = this.props.data
+    const displayMajorCities = this.state.displayMajorCities
+    const toggleWeather = this.toggleWeather
+
     return (
       <div className="weather">
 
@@ -15,12 +34,12 @@ class Weather extends React.Component {
           <h1>{current_city.temperature}<br/>{current_city.description}</h1>
         </div>
 
-        <div className="weather-cities row">
-          {nearby_cities.map((loc) => { return <LocationWeather geoLocation={loc} key={shortid.generate()}/> })}
+        <div className='row'>
+          <WeatherToggleButton toggleWeather={toggleWeather} displayMajorCities={displayMajorCities}/>
         </div>
 
-        <div className="weather-cities row">
-          {major_cities.map((loc) => { return <LocationWeather geoLocation={loc} key={shortid.generate()}/> })}
+        <div className="related-cities row">
+          {displayMajorCities ? <RelatedCities data={major_cities}/> : <RelatedCities data ={nearby_cities} />}
         </div>
 
       </div>
