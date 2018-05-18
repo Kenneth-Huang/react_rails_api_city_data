@@ -6,11 +6,11 @@ class Event extends React.Component {
     return (
       <React.Fragment>
         <div className='event mb-2'>
-          <div className="event-image-holder">
+          <div className="image-holder">
             <a href={url} target="_blank"><img src={image_url} alt={name}/></a>
           </div>
 
-          <div className="event-text-holder">
+          <div className="text-holder">
             <h3><a href={url} target="_blank">{name}</a></h3>
             <p>on {date} at <a href={venue_url} target="_blank">{venue}</a></p>
           </div>

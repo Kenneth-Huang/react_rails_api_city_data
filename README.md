@@ -12,11 +12,16 @@ This is one of my first few React projects. It was bootstrapped with [Create Rea
   * Related Articles via [New York Times](https://developer.nytimes.com/)
   * Photos via [flickr photo search](https://www.flickr.com/services/api/)
   * Upcoming Events via [Eventful](http://api.eventful.com/docs)
-- Uses [Google Places API](https://developers.google.com/places/web-service/intro) for location autocomplete
+- Autocomplete in location field
 - Spinny wheel while you wait for API results
-- Toggle between weather results for Nearby and Major cities
+- Toggle between weather results for nearby cities and major cities
+
+## Tech Features
+
 - Uses vanilla React for rendering components
 - Bootstrap 4
+- Uses [Create React App's SASS precompiler](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc)
+- Uses [Google Places API](https://developers.google.com/places/web-service/intro) for location autocomplete
 
 ## Getting Started
 
@@ -25,6 +30,7 @@ This is one of my first few React projects. It was bootstrapped with [Create Rea
 - Start that server with `rails s` and browse to `localhost:3001`
 - Fork and clone or download this repo
 - Start this server with `npm serve` and browse to `locahost:3000`
+- Run the SASS preprocessor in a different tab `npm run watch-css`
 
 
 ## Tour of the App

@@ -5,82 +5,99 @@
 3. Styles are automatically updated in App.css
 -----------------------------------------------
 */
-h1, h2, h3, h4, h5 {
-  font-family: 'Gothic A1', sans-serif; }
 
-p {
-  font-family: 'Roboto', sans-serif; }
+h1, h2, h3, h4, h5 { font-family: 'Gothic A1', sans-serif; }
+p { font-family: 'Roboto', sans-serif; }
+
 
 .loading-indicator {
   margin-top: 50px;
-  text-align: center; }
-  .loading-indicator img {
-    height: 100px; }
+  text-align: center;
+  img { height: 100px; }
+}
 
 .suggestion {
   background-color: #f1f1f1;
   color: gray;
   font-size: 80%;
-  padding: 0.25em 0.7em; }
+  padding: 0.25em 0.7em;
+}
+
 
 /* ------- ARTICLES ------- */
+
 .article {
   border: 1px solid #f1f1f1;
   padding: 5%;
   border-radius: 5px;
-  overflow: auto; }
-  .article h4 {
+  overflow: auto;
+  h4 {
     margin: 0px;
-    font-size: 0.9em; }
-  .article p {
+    font-size: 0.9em;
+  }
+  p {
     margin: 0px;
     font-size: 0.7em;
-    color: gray; }
+    color: gray;
+  }
+}
+
 
 /* ------- EVENTS ------- */
+
 .event {
   border: 1px solid #f1f1f1;
   padding: 2%;
   border-radius: 5px;
-  overflow: auto; }
-  .event .image-holder {
+  overflow: auto;
+  .image-holder {
     width: 80px;
     float: left;
-    margin-right: 30px; }
-    .event .image-holder img {
-      width: 80px; }
-  .event .text-holder h3 {
-    font-size: 1.25em;
-    margin-bottom: 0px; }
-  .event .text-holder p {
-    font-size: 0.9em; }
+    margin-right: 30px;
+    img { width: 80px; }
+  }
+  .text-holder {
+    h3 {
+      font-size: 1.25em;
+      margin-bottom: 0px;
+    }
+    p {font-size: 0.9em;}
+  }
+}
+
+
 
 /* ------- WEATHER ------- */
+
 .weather {
   border: 1px solid #f1f1f1;
   padding: 2%;
   border-radius: 5px;
   background-color: #f1f1f1;
-  margin: 10px 0px 50px 0px; }
-  .weather .current-city {
+  margin: 10px 0px 50px 0px;
+  .current-city {
     text-align: center;
-    margin-bottom: 40px; }
-    .weather .current-city h2 {
-      margin: 0px; }
-    .weather .current-city h3 {
-      font-size: 1em; }
-  .weather .related-cities {
+    margin-bottom: 40px;
+    h2 { margin: 0px; }
+    h3 { font-size: 1em; }
+  }
+  .related-cities {
     border-top: 1px solid #e1e1e1;
-    padding-top: 25px; }
-    .weather .related-cities h4 {
+    padding-top: 25px;
+    h4 {
       margin: 0px;
-      font-size: 120%; }
-    .weather .related-cities p {
+      font-size: 120%;
+    }
+    p {
       margin: 0px;
-      font-size: 80%; }
-    .weather .related-cities img {
+      font-size: 80%;
+    }
+    img {
       float: left;
-      margin-right: 10px; }
+      margin-right: 10px;
+    }
+  }
+}
 
 .weather-toggle {
   text-align: center;
@@ -91,8 +108,8 @@ p {
   padding: 0px;
   height: 19px;
   overflow: none;
-  cursor: pointer; }
-  .weather-toggle div {
+  cursor: pointer;
+  div {
     display: inline-block;
     margin: 0;
     padding: 3px 10px;
@@ -100,17 +117,23 @@ p {
     text-transform: uppercase;
     letter-spacing: 1px;
     overflow: auto;
-    color: gray; }
-  .weather-toggle .on {
+    color: gray;
+  }
+  .on {
     color: white;
     background-color: #28a745;
     border-radius: 4px;
     height: 17px;
-    margin-bottom: 2px; }
+    margin-bottom: 2px;
+  }
+}
+
 
 /* ------- PHOTOS ------- */
 .card-columns {
-  column-break-inside: avoid; }
-  .card-columns .card {
+  column-break-inside: avoid;
+  .card {
     display: inline-block;
-    margin: 10px; }
+    margin: 10px;
+  }
+}
