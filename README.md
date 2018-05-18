@@ -14,6 +14,7 @@ This is one of my first few React projects. It was bootstrapped with [Create Rea
   * Upcoming Events via [Eventful](http://api.eventful.com/docs)
 - Uses [Google Places API](https://developers.google.com/places/web-service/intro) for location autocomplete
 - Spinny wheel while you wait for API results
+- Toggle between weather results for Nearby and Major cities
 - Uses vanilla React for rendering components
 - Bootstrap 4
 
