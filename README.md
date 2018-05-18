@@ -48,10 +48,13 @@ The architecture of the app components looks like this:
 App.js
  - ReportForm
    - LocationSearchInput
+ - LoadingIndicator
  - Report
    - ReportHeader
    - Weather
-     - LocationWeather
+     - WeatherToggleButton
+     - RelatedCities
+       - LocationWeather
    - Events
      - Event
    - Articles
