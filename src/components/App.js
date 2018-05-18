@@ -3,6 +3,7 @@ import '../App.css';
 import Report from './Report'
 import ReportForm from './ReportForm'
 import LoadingIndicator from './LoadingIndicator'
+// import sample_data from '../sample_data'
 
 class App extends Component {
   constructor(){
