@@ -101,7 +101,7 @@ getReportData = (inputLocation) => {
 
 Report data is sent via the `Report` component...
 
-```js
+```jsx
 // src/components/App.js
 
 {reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
@@ -109,7 +109,7 @@ Report data is sent via the `Report` component...
 
 ... and trickles down to the other components via props from there.
 
-```js
+```jsx
 // src/components/Report.js
 
 <ReportHeader cityLoc={cityLoc} stateLoc={stateLoc}/>
