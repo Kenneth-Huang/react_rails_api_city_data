@@ -158,7 +158,7 @@ const sample_data = {
         "events": [
             {
                 "id": "E0-001-114417616-2",
-                "name": "Caesar Brothers Funk Box -    -  Kermit Ruffins and the BBQ Swingers -    -  Blue Nile Balcony Room -  Brass Flavor (brass band) -     -  DJ Black Pearl",
+                "name": "Kermit Ruffins and the BBQ Swingers",
                 "date": "2018-05-18 19:00:00",
                 "url": "http://neworleans.eventful.com/events/caesar-brothers-funk-box--kermit-ruffins-and-/E0-001-114417616-2?utm_source=apis&utm_medium=apim&utm_campaign=apic",
                 "venue": "Blue Nile",

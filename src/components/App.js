@@ -68,7 +68,7 @@ class App extends Component {
 
         {!isFetching && reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
 
-        { /* <Report data={sample_data.attributes} cityLoc={cityLoc} stateLoc={stateLoc}/> */ }
+        { /*  <Report data={sample_data.attributes} cityLoc={cityLoc} stateLoc={stateLoc}/> */ }
       </div>
     );
   }

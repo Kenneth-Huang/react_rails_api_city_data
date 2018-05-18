@@ -1,6 +1,13 @@
 import React from "react"
+var moment = require('moment');
+
 
 class Event extends React.Component {
+
+  formatDate = function(d){
+    return moment(d).format('MMMM Do YYYY, h:mm a')
+  }
+
   render(){
     const {name, date, url, image_url, venue, venue_url} = this.props.data
     return (
@@ -12,7 +19,7 @@ class Event extends React.Component {
 
           <div className="text-holder">
             <h3><a href={url} target="_blank">{name}</a></h3>
-            <p>on {date} at <a href={venue_url} target="_blank">{venue}</a></p>
+            <p>{this.formatDate(date)} at <a href={venue_url} target="_blank">{venue}</a></p>
           </div>
 
         </div>
