@@ -12,11 +12,7 @@ class Weather extends React.Component {
 
   toggleWeather = (e) => {
     e.preventDefault()
-    if(this.state.displayMajorCities === true){
-      this.setState({displayMajorCities: false})
-    } else {
-      this.setState({displayMajorCities: true})
-    }
+    this.state.displayMajorCities ? this.setState({displayMajorCities: false}) : this.setState({displayMajorCities: true})
   }
 
   render(){
