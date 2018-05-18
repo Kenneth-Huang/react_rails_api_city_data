@@ -17,6 +17,9 @@ p { font-family: 'Roboto', sans-serif; }
   padding: 0.25em 0.7em;
 }
 
+
+/* ------- ARTICLES ------- */
+
 .article {
   border: 1px solid #f1f1f1;
   padding: 5%;
@@ -34,6 +37,9 @@ p { font-family: 'Roboto', sans-serif; }
   font-size: 0.7em;
   color: gray;
 }
+
+
+/* ------- EVENTS ------- */
 
 .event {
   border: 1px solid #f1f1f1;
@@ -61,6 +67,9 @@ p { font-family: 'Roboto', sans-serif; }
 .event-text-holder p {
   font-size: 0.9em;
 }
+
+
+/* ------- WEATHER ------- */
 
 .weather {
   border: 1px solid #f1f1f1;
@@ -92,6 +101,7 @@ p { font-family: 'Roboto', sans-serif; }
   margin-right: 10px;
 }
 
+/* ------- PHOTOS ------- */
 .card-columns {
   column-break-inside: avoid;
 }
