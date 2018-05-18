@@ -18,19 +18,21 @@ This is one of my first few React projects. It was bootstrapped with [Create Rea
 
 ## Tech Features
 
+- Bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app)
 - Uses vanilla React for rendering components
 - Bootstrap 4
 - Uses [Create React App's SASS precompiler](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc)
 - Uses [Google Places API](https://developers.google.com/places/web-service/intro) for location autocomplete
+- Data comes from [this Rails API](https://github.com/lortza/rails_api_integrator)
 
 ## Getting Started
 
 - Fork and clone or download the [Rails API Integrator API](https://github.com/lortza/rails_api_integrator) which is the data this app consumes.
-- Set up a postgres db
-- Start that server with `rails s` and browse to `localhost:3001`
+- Set up and run a postgres db
+- Start the Rails API server with `rails s` and browse to `localhost:3001`
 - Fork and clone or download this repo
 - Start this server with `npm serve` and browse to `locahost:3000`
-- Run the SASS preprocessor in a different tab `npm run watch-css`
+- Run the SASS preprocessor `npm run watch-css`
 
 
 ## Tour of the App
