@@ -3,7 +3,6 @@ import '../App.css';
 import Report from './Report'
 import ReportForm from './ReportForm'
 import LoadingIndicator from './LoadingIndicator'
-// import sample_data from '../sample_data'
 
 class App extends Component {
   constructor(){
@@ -67,8 +66,6 @@ class App extends Component {
         {isFetching ? <LoadingIndicator /> : ""}
 
         {!isFetching && reportData ? <Report data={reportData} cityLoc={cityLoc} stateLoc={stateLoc}/> : ""}
-
-        { /*  <Report data={sample_data.attributes} cityLoc={cityLoc} stateLoc={stateLoc}/> */ }
       </div>
     );
   }
