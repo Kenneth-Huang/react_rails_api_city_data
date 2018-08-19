@@ -2,6 +2,8 @@
 
 (a.k.a. react_rails_api_city_data)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ddb619e286b0f98fae18/maintainability)](https://codeclimate.com/github/lortza/react_rails_api_city_data/maintainability)
+
 This is one of my first few React projects. It was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app) and it consumes a separate [Rails API Integrator API](https://github.com/lortza/rails_api_integrator) app that I built.
 
 
