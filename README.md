@@ -16,7 +16,13 @@ This is one of my first few React projects. It was bootstrapped with [Create Rea
   * Upcoming Events via [Eventful](http://api.eventful.com/docs)
 - Autocomplete in location field
 - Spinny wheel while you wait for API results
+
+![alt text](/public/images/screenshots/spinner.gif "waiting for results")
+
 - Toggle between weather results for nearby cities and major cities
+
+![alt text](/public/images/screenshots/toggle.gif "toggle results")
+
 
 ## Tech Features
 
@@ -39,7 +45,7 @@ This is one of my first few React projects. It was bootstrapped with [Create Rea
 
 ## Tour of the App
 
-![Alt text](/public/images/readme_screenshot.jpg?raw=true "Home Page")
+![Alt text](/public/images/screenshots/full_page.jpg?raw=true "Home Page")
 
 
 ### Architecture
@@ -124,3 +130,7 @@ Report data is sent via the `Report` component...
 
 { articles ? <Articles data={articles}/> : <p>There are no Articles on the topic of {cityLoc}, {stateLoc}.</p> }
 ```
+
+The full app in action:
+
+![alt text](/public/images/screenshots/city_info.gif "getting results for city data")
